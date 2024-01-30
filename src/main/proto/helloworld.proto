@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package com.digvijayb.bootstore.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.digvijayb.bootstore.grpc";
+option java_outer_classname = "HelloWorldProto";
+
+import "google/protobuf/empty.proto";
+//import "wrappers.proto";
+
+// The greeting service definition.
+service HelloWordService {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+  }
+
+  rpc GeneratePing (google.protobuf.Empty) returns (PingReply) {
+  }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+message PingReply {
+  int32 count = 1;
+}

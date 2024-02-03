@@ -1,0 +1,23 @@
+### Create Book Entity
+POST localhost:8080/api/books
+Authorization: Basic YWRtaW46cGFzczEyMw
+Content-Type: application/json
+
+{
+  "name" : "The Python",
+  "isbn": "FAK000123THPAY",
+  "authorName": "Jill",
+  "price": 170.90
+}
+
+
+
+### Get Book By Id
+GET localhost:8080/api/books/1
+Authorization: Basic YWRtaW46cGFzczEyMw
+
+
+### Get Books
+
+GET localhost:8080/api/books?page=0&size=3&sort=price,desc&sort=authorName
+Authorization: Basic YWRtaW46cGFzczEyMw
